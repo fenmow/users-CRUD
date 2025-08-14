@@ -18,7 +18,7 @@ module.exports = {
   show: async (req, res) => {
     const user = await User.findById(req.params.id);
     if (!user) res.status(404).json({ message: "User not found." });
-    res.status(200).json(user);
+    res.json(user);
   },
 
   // UPDATE /users/:id

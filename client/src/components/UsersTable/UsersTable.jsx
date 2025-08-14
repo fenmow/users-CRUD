@@ -50,7 +50,7 @@ export default function UsersTable() {
                 <td>{user.name}</td>
                 <td>{user.email}</td>
                 <td>
-                  <Link to={`/update/${user.id}`} className="btnLink">
+                  <Link to={`/${user.id}`} className="btnLink">
                     <button id="readBtn" className="btn">
                       Read
                     </button>
