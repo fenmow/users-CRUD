@@ -5,4 +5,38 @@
     display: flex;
     justify-content: end;
   }
+
+  table {
+    margin-top: 20px;
+    width: 100%;
+    text-align: left;
+  }
+
+  th {
+    padding: 5px;
+  }
+
+  td {
+    padding-left: 5px;
+  }
+
+  table, th, td {
+    border: 1px solid rgba(128, 128, 128, 0.311);
+    border-collapse: collapse;
+  }
+
+  #readBtn, #editBtn {
+    background-color: #0D6CF3;
+    margin: 7px 0;
+    color: #ffff;
+  }
+
+  #editBtn {
+    margin: 0 20px;
+  }
+
+  #deleteBtn {
+    background-color: #D93347;
+    color: #ffff;
+  }
 }
