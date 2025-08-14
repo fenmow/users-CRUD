@@ -49,6 +49,15 @@ class User {
 
     return user;
   }
+
+  static async delete(id) {
+    const deletedProduct = await query(
+      `DELETE FROM "Users" WHERE id = $1 RETURNING *;`,
+      [id]
+    );
+    if (!deletedProduct) return null;
+    return new User(deletedProduct.rows[0]);
+  }
 }
 
 module.exports = User;

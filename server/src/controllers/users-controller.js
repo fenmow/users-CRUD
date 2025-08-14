@@ -28,5 +28,9 @@ module.exports = {
   },
 
   // DELETE /users/:id
-  delete: async (req, res) => {},
+  delete: async (req, res) => {
+    const { id } = req.params;
+    const deletedUser = await User.delete(id);
+    res.json(deletedUser);
+  },
 };
